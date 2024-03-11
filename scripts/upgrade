@@ -63,9 +63,9 @@ cp -ar "$install_dir/plugins" "$tmpdir/plugins"
 ynh_secure_remove --file="$install_dir"
 
 if [ "$version" = "Enterprise" ]; then
-  ynh_setup_source --dest_dir="$install_dir" --source_id="enterprise"
+  ynh_setup_source --dest_dir="$install_dir" --source_id="enterprise" --full_replace=1
 elif [ "$version" = "Team" ]; then
-  ynh_setup_source --dest_dir="$install_dir" --source_id="main"
+  ynh_setup_source --dest_dir="$install_dir" --source_id="main" --full_replace=1
 fi
 
 # Copy the admin saved settings and plugins from tmp directory to final path
